@@ -1366,21 +1366,21 @@ MonoBehaviour:
     The movement steps can only happen once every 0.26 seconds.
 
     Horizontal
-    movement will be controlled by the [Left] and [Right] buttons.
+    movement will be controlled by the [Horizontal] axis.
+
+    Vertical movement
+    will be controlled by the [Vertical] axis.
+
+    This object can push objects
+    as long as their mass combined doesn''t exceed 2.
+
+    Some values will be set
+    on animator Player:
+
+    Horizontal velocity will be set to parameter VelocityX.
 
     Vertical
-    movement will be controlled by the [Down] and [Up] buttons.
-
-    This object
-    can push objects as long as their mass combined doesn''t exceed 2.
-
-    Some
-    values will be set on animator Player:
-
-    Horizontal velocity will be set to
-    parameter VelocityX.
-
-    Vertical velocity will be set to parameter VelocityY.
+    velocity will be set to parameter VelocityY.
 
 '
   description: 
@@ -1394,7 +1394,7 @@ MonoBehaviour:
   axisToAlign: 0
   maxTurnSpeed: 360
   inputEnabled: 1
-  inputType: 1
+  inputType: 0
   horizontalAxis: Horizontal
   verticalAxis: Vertical
   horizontalButtonPositive: Right
@@ -1819,14 +1819,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene Snippets
+  _explanation: Switches to scene SampleScene
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: Snippets
+  sceneName: SampleScene
 --- !u!114 &593023277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When key Escape is pressed:\n          switches to scene Snippets\n"
+  _explanation: "When key Escape is pressed:\n          switches to scene SampleScene\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
