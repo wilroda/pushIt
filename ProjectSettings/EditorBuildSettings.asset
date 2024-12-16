@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Sokoban 3.unity
     guid: c70a800c1ff2f4d578436d80aca40326
   - enabled: 1
-    path: Assets/Scenes/Sokoban 4.unity
+    path: Assets/Scenes/Sokoban.unity
     guid: adc191c2106cb413f8a80cb44b5117d2
   - enabled: 1
     path: Assets/Scenes/Sokoban 5.unity
