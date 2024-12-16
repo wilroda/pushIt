@@ -507,7 +507,7 @@ MonoBehaviour:
     objectives are fullfilled, play a sound and load a new scene (right now it loads
     the same scene).\n----------------\nIf (BoxObjective == LevelBoxObjectives) and
     Every frame:\n          plays sound success at volume 1 and at pitch 1\n then,
-    at 1 seconds, \n          switches to scene ChangeMe 1\n"
+    at 1 seconds, \n          switches to scene Sokoban 3\n"
   description: 'Check the number of boxes that are inside objectives.
 
     Once all
@@ -554,14 +554,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene ChangeMe 1
+  _explanation: Switches to scene Sokoban 3
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: ChangeMe 1
+  sceneName: Sokoban 3
 --- !u!1001 &410605846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   _explanation: 'Dual axis grid movement, at (64.00, 64.00) units per second ((4.00,
     4.00) cells/sec).
 
-    The movement steps can only happen once every 0,26 seconds.
+    The movement steps can only happen once every 0.26 seconds.
 
     Horizontal
     movement will be controlled by the [Horizontal] axis.
@@ -1498,14 +1498,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene ChangeMe 1
+  _explanation: Switches to scene Sokoban 1
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: ChangeMe 1
+  sceneName: Sokoban 1
 --- !u!114 &593023277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When key Escape is pressed:\n          switches to scene ChangeMe
+  _explanation: "When key Escape is pressed:\n          switches to scene Sokoban
     1\n"
   description: 
   enableTrigger: 1
@@ -1573,63 +1573,6 @@ PrefabInstance:
     - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_LocalPosition.y
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
---- !u!1001 &824457435
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1908069327}
-    m_Modifications:
-    - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_Name
-      value: Crate
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2533,11 +2476,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
---- !u!4 &1588717057 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
-  m_PrefabInstance: {fileID: 824457435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1640052043 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
@@ -4930,7 +4868,6 @@ Transform:
   m_Children:
   - {fileID: 959733177}
   - {fileID: 594848504}
-  - {fileID: 1588717057}
   - {fileID: 1167454726}
   - {fileID: 756476297}
   - {fileID: 1841438543}
