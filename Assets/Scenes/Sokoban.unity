@@ -574,6 +574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24
@@ -1002,8 +1006,6 @@ GameObject:
   - component: {fileID: 593023271}
   - component: {fileID: 593023273}
   - component: {fileID: 593023272}
-  - component: {fileID: 593023275}
-  - component: {fileID: 593023274}
   - component: {fileID: 593023277}
   - component: {fileID: 593023276}
   m_Layer: 0
@@ -1120,6 +1122,8 @@ MonoBehaviour:
   _pivot: 5
   _canPush: 0
   _mass: 0
+  ignoreCollisionObjects: []
+  ignoreCollisionTags: []
   _size: {x: 0, y: 0}
   stepAnimationCurve:
     serializedVersion: 2
@@ -1331,8 +1335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When this hits an object with tags [Fireball] :\n          destroys
-    this object\n"
+  _explanation: "When this objects hits another object with tags [Fireball] :\n         
+    destroys this object\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -1360,7 +1364,7 @@ MonoBehaviour:
   _explanation: 
   description: 
   hypertags:
-  - {fileID: 11400000, guid: ef738cdf582e7b74ca6542cab74d7ad0, type: 2}
+  - {fileID: 11400000, guid: ac84a8b2781f74904897ef29b1fa19eb, type: 2}
 --- !u!114 &593023272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,72 +1423,6 @@ MonoBehaviour:
   useCooldown: 1
   cooldown: 1
   elseActions: []
---- !u!114 &593023274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593023261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff1bf81a4ddee44cb68bd204fc4debd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: "Changes tiles at HarvestPoint according to the given rules:\n  1.
-    Invalid rule\n  2. Invalid rule\n  3. Invalid rule"
-  description: 
-  enableAction: 1
-  hasTags: 0
-  actionTags: []
-  hasConditions: 0
-  actionConditions: []
-  vicinityType: 0
-  radius: 1
-  target: {fileID: 92217947}
-  tags: []
-  rules:
-  - source: {fileID: 11400000, guid: 99923cdbc726e6f47a7b7797d41128d1, type: 2}
-    dest: {fileID: 11400000, guid: 9938e3f27b8988d46a259345857ae236, type: 2}
-  - source: {fileID: 11400000, guid: 9938e3f27b8988d46a259345857ae236, type: 2}
-    dest: {fileID: 11400000, guid: 1b73bd99bf87a4b49b5220954de8515b, type: 2}
-  - source: {fileID: 11400000, guid: 1b73bd99bf87a4b49b5220954de8515b, type: 2}
-    dest: {fileID: 0}
---- !u!114 &593023275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593023261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac24d8e98e97620458dc0c6fbe26a958, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: "When key X is pressed (this can only happen every 1 seconds):\n         
-    changes tiles at HarvestPoint according to the given rules:\n            1. Invalid
-    rule\n            2. Invalid rule\n            3. Invalid rule\n"
-  description: 
-  enableTrigger: 1
-  allowRetrigger: 1
-  hasPreconditions: 0
-  preConditions: []
-  actions:
-  - delay: 0
-    action: {fileID: 593023274}
-  inputType: 1
-  buttonName: 
-  key: 120
-  axis: 
-  deadArea: {x: -0.2, y: 0.2}
-  continuous: 0
-  negate: 0
-  useCooldown: 1
-  cooldown: 1
-  elseActions: []
 --- !u!114 &593023276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1498,14 +1436,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene ChangeMe 1
+  _explanation: Switches to scene Sokoban
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: ChangeMe 1
+  sceneName: Sokoban
 --- !u!114 &593023277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,8 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When key Escape is pressed:\n          switches to scene ChangeMe
-    1\n"
+  _explanation: "When key Escape is pressed:\n          switches to scene Sokoban\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -1886,6 +1823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8
@@ -2037,6 +1978,8 @@ MonoBehaviour:
   _pivot: 0
   _canPush: 0
   _mass: 1
+  ignoreCollisionObjects: []
+  ignoreCollisionTags: []
   _size: {x: 0, y: 0}
   stepAnimationCurve:
     serializedVersion: 2
@@ -2483,6 +2426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8
@@ -2745,6 +2692,10 @@ PrefabInstance:
     - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_Name
       value: Crate
+      objectReference: {fileID: 0}
+    - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4976,6 +4927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24
@@ -5032,6 +4987,10 @@ PrefabInstance:
     - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_Name
       value: Crate
+      objectReference: {fileID: 0}
+    - target: {fileID: 40538224236434582, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3420662420244294593, guid: d5a5dcde4fd9aaa4d840717a31c43ba3, type: 3}
       propertyPath: m_LocalPosition.x

@@ -37,11 +37,11 @@
       "depth": 2,
       "source": "registry",
       "dependencies": {
+        "com.unity.burst": "1.8.4",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.mathematics": "1.1.0",
-        "com.unity.modules.uielements": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.burst": "1.8.4"
+        "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -73,8 +73,8 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.mathematics": "1.1.0",
         "com.unity.2d.common": "9.0.7",
+        "com.unity.mathematics": "1.1.0",
         "com.unity.modules.physics2d": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -93,8 +93,8 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.modules.tilemap": "1.0.0",
         "com.unity.2d.tilemap": "1.0.0",
+        "com.unity.modules.tilemap": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -315,14 +315,14 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "b0f2201860564e0ea305fa25f99e92d49a0720d1"
+      "hash": "de1c4f1e836ece26682751df1bb5eff7befafbf0"
     },
     "com.videojogoslusofona.okapikit.samples": {
       "version": "https://github.com/VideojogosLusofona/OkapiKit.git#samples",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f9b12f0ec163a4b4bd72d779a33d1338415b54fa"
+      "hash": "fd4ff743e94861962f370601652c0f966ec9d735"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
